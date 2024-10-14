@@ -1,0 +1,30 @@
+<%- include('./partials/header') %>
+
+    <main class="container_main_détail">
+        <section class="container_detail">
+          <p>Dans notre détaillant de café, l'ambiance chaleureuse vous invite à ralentir le rythme trépidant de la vie quotidienne et à savourer l'instant présent. Que vous soyez un connaisseur de café ou un novice curieux, nous sommes là pour vous guider dans un voyage sensoriel inoubliable, où chaque gorgée révèle un monde de saveurs riches et complexes.</p>  
+        </section>
+
+
+        <!-- ici description du produits cliqué par le client -->
+        <section class="container_subdetail">
+                
+                    <% if (coffee) { %>                 
+                    <div class="container_detail_article">
+                        <h2><%= coffee.name %></h2>
+                        <img src="/images/coffees/<%= coffee.reference %>.png" alt="">
+                        <p> <%= coffee.description %>
+                        </p>
+                        <p>Origine du café : <%= coffee.origine %></p>
+                        <a href="../catalogue">
+                        <button class="button_detail" >Retournez vers le catalogue</button>
+                        </a>
+                    </div>
+                    
+                    <% } %>
+            </section>
+
+    </main>    
+    <%- include('./partials/footer') %>>
+
+

@@ -1,0 +1,38 @@
+<%- include('./partials/header') %>
+
+    <main class="container_main">
+     <section class="content_us">
+        <h2> Notre boutique !  </h2>
+        <div class="content_flex">
+            <p> Bienvenue dans notre boutique, où règne une ambiance chaleureuse et accueillante qui éveille tous vos sens. Dès que vous franchissez la porte, vous êtes enveloppé d'une douce symphonie d'arômes envoûtants de café fraîchement moulu.
+            </p>
+        <div class="content_img">
+            <img src="./images/coffees/100955890.png" alt="coffee">
+        </div>
+       </div>   
+     </section>
+     
+     <section class="container_secondary">
+        <h2><a href="/catalogue"> Notre Catalogue </a></h2>
+        <p>N'hésitez pas à passer voir on a de superbe produits</p>
+     </section>
+   
+     
+     <div class="footer_container">
+        <% coffee.forEach(coffees => { %>
+            <article class="container_article">
+                <h2>Nouveautés</h2>
+                <p> <%= coffees.name %></p>
+                <img src="/images/coffees/<%= coffees.reference %>.png" alt="">
+                <p> <%= coffees.description %> </p>
+                <a href="/detail/<%= coffees.id %>">Découvrir</a>
+            </article>
+            <% }) %> 
+    </div>
+
+        
+        
+    </main>
+    <%- include('./partials/footer') %>
+
+

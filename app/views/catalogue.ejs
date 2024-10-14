@@ -1,0 +1,60 @@
+<%- include('./partials/header') %>
+
+
+    <main>
+        <div class="container_catalogue">
+        <section class="content_catalogue">
+            <div>
+                <h1>Notre catalogue</h1>
+            </div>
+        </section>
+        <div class="container_flex_catégorie">
+        <!-- bouton dynamique ici -->
+           
+            
+        <div class="containerBtnRecherche" >
+            <form class="containerform" class="btnRecherche" action="/catalogue" method="get">
+                <select class="btnSelect" name="category" id="category">
+                    <option value="null">aucun</option>
+                    <option value="Fruité">fruité</option>
+                    <option value="Acide">Acide</option>
+                    <option value="Corsé">Corsé</option>
+                    <option value="Doux">Doux</option>
+                    <option value="Chocolaté">Chocolaté</option>
+                </select>
+                <input class="btnrecherche" type="submit" value="Chercher">
+            </form>
+        </div>
+            
+                
+        </div>
+        <div class="container_article_catalogue">
+            <% coffee.forEach((coffees, index) => { %>
+                <section class="content_article_catalogue <%= (index >= 3 && 'hidden') || '' %>">
+            <article class="article_catalogue">
+                <img src="/images/coffees/<%= coffees.reference %>.png" alt="café">
+            <div>
+                <h2><%= coffees.name %></h2>
+                <p> <%= coffees.description %></p>
+                <p> Prix : <%= coffees.prix_au_kilo %>€</p>
+                <p> En stock : <% if (coffees.disponible === true) { %>
+                            Oui
+                        <% } else { %>
+                            Non
+                <% } %> </p>
+                <a href="/detail/<%= coffees.id %>">Voir détail</a>
+            </div>
+            </article>
+        </section>
+        <% }) %>
+        
+    </div>
+    <div class="container_flex_all" id="allCoffee">
+        <button class="button btn-1">Voir tout</button>
+    </div>
+    </main>
+        
+   
+    <%- include('./partials/footer') %>
+    
+
