@@ -29,7 +29,7 @@ Projet réalisé en 4 jour le projet oCoffe, c'est le tout premier projet que j'
 ### A la racine du projet
 
 - le fichier index.js : le point d'entrée principal de l'application avec Node.js/Express
-- le fichier .env.example qui contient un exemple de variable d'environnement
+- le fichier .env.example qui contient les dependances & les scripts 
 - un fichier package.json qui contient les variables d'environnement
 
 
