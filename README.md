@@ -13,6 +13,7 @@ Projet réalisé en 4 jour le projet oCoffe, c'est le tout premier projet que j'
 - CSS
 - NodeJS
 - Express
+- PostgresQL
   
 ## Structure du projet :
 
