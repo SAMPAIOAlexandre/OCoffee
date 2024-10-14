@@ -16,7 +16,7 @@ Projet réalisé en 4 jour le projet oCoffe, celui-ci est le tout premier que j'
   
 ## Structure du projet :
 
-Un dossier app qui contient :
+### Un dossier app qui contient :
 - Un dossier controller qui contient le fichier maincontroller.js
 - Un dossier views qui contients toutes les views
 - Un dossier middleware qui contient un fichier 404.js qui gère les erreurs 404
@@ -24,8 +24,13 @@ Un dossier app qui contient :
 - Un dossier data qui contient un fichier create_db.sql
 - Un fichier database.js
 
-Un Dossier integrations qui contient le css les images et les pages en version html.
+### Un Dossier integrations qui contient le css les images, les pages en version html et un fichier app.js
 
+### A la racine du projet
+
+- le fichier index.js : le point d'entrée principal de l'application avec Node.js/Express
+- le fichier .env.example qui contient un exemple de variable d'environnement
+- un fichier package.json qui contient les variables d'environnement
 
 
 ## Mise en place du projet
